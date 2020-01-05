@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		084C1FBD2330BEFD003967F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084C1FBC2330BEFD003967F8 /* AppDelegate.swift */; };
 		084C1FBF2330BEFD003967F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084C1FBE2330BEFD003967F8 /* SceneDelegate.swift */; };
-		084C1FC12330BEFD003967F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084C1FC02330BEFD003967F8 /* ViewController.swift */; };
 		084C1FC42330BEFD003967F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084C1FC22330BEFD003967F8 /* Main.storyboard */; };
 		084C1FC72330BEFD003967F8 /* petepete.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 084C1FC52330BEFD003967F8 /* petepete.xcdatamodeld */; };
 		084C1FC92330BEFE003967F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 084C1FC82330BEFE003967F8 /* Assets.xcassets */; };
@@ -44,7 +43,6 @@
 		084C1FB92330BEFD003967F8 /* petepete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petepete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		084C1FBC2330BEFD003967F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		084C1FBE2330BEFD003967F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		084C1FC02330BEFD003967F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		084C1FC32330BEFD003967F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		084C1FC62330BEFD003967F8 /* petepete.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = petepete.xcdatamodel; sourceTree = "<group>"; };
 		084C1FC82330BEFE003967F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				084C204223339ED6003967F8 /* petepete.entitlements */,
 				084C1FBC2330BEFD003967F8 /* AppDelegate.swift */,
 				084C1FBE2330BEFD003967F8 /* SceneDelegate.swift */,
-				084C1FC02330BEFD003967F8 /* ViewController.swift */,
 				084C1FC22330BEFD003967F8 /* Main.storyboard */,
 				084C203E2332002E003967F8 /* DetailViewController.swift */,
 				084C203C2331D718003967F8 /* PetePeteHomeTableViewController.swift */,
@@ -289,7 +286,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				084C20472333B6F4003967F8 /* LaunchScreen.swift in Sources */,
-				084C1FC12330BEFD003967F8 /* ViewController.swift in Sources */,
 				084C1FC72330BEFD003967F8 /* petepete.xcdatamodeld in Sources */,
 				084C203D2331D718003967F8 /* PetePeteHomeTableViewController.swift in Sources */,
 				084C1FBD2330BEFD003967F8 /* AppDelegate.swift in Sources */,
