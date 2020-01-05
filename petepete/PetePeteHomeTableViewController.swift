@@ -90,26 +90,10 @@ class PetePeteHomeTableViewController: UITableViewController, MCSessionDelegate,
     }
 
     // MARK: - Actions
-    
     public func sayHi() {
         let alert = UIAlertController(title: "Hi There!", message: "Hey there! Glad to see you got this working!", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-    }
-    
-    // MARK: - Multipeer Connection ActionsSetting
-
-    func startHosting(action: UIAlertAction) {
-        guard let mcSession = mcSession else { return }
-            mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "petepeteGOP9", discoveryInfo: nil, session: mcSession)
-        mcAdvertiserAssistant?.start()
-    }
-    
-    func joinSession(action: UIAlertAction) {
-        guard let mcSession = mcSession else { return }
-        let mcBrowser = MCBrowserViewController(serviceType: "petepeteGOP9", session: mcSession)
-        mcBrowser.delegate = self
-        present(mcBrowser, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -121,7 +105,6 @@ class PetePeteHomeTableViewController: UITableViewController, MCSessionDelegate,
     }
     
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return arrVacancy.count
@@ -147,6 +130,7 @@ class PetePeteHomeTableViewController: UITableViewController, MCSessionDelegate,
         return 50
     }
    
+    // MARK: - FaceID
         @objc fileprivate func handleFaceId(){
             let context = LAContext()
 
@@ -171,6 +155,7 @@ class PetePeteHomeTableViewController: UITableViewController, MCSessionDelegate,
             }
         }
     
+    // MARK: - Show Connection
     @objc func showConnectionPrompt() {
         let ac = UIAlertController(title: "Pencarian", message: nil, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Teman yang mau ikut pesan", style: .default, handler: startHosting))
@@ -183,6 +168,21 @@ class PetePeteHomeTableViewController: UITableViewController, MCSessionDelegate,
         subview2.layer.cornerRadius = 10
         subview2.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.8470588235, blue: 0.431372549, alpha: 1)
         ac.view.tintColor = #colorLiteral(red: 0.6070170403, green: 0.1529285014, blue: 0.01681580208, alpha: 1)
+    }
+    
+    // MARK: - Multipeer Connection ActionsSetting
+
+    func startHosting(action: UIAlertAction) {
+        guard let mcSession = mcSession else { return }
+            mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "petepeteGOP9", discoveryInfo: nil, session: mcSession)
+        mcAdvertiserAssistant?.start()
+    }
+    
+    func joinSession(action: UIAlertAction) {
+        guard let mcSession = mcSession else { return }
+        let mcBrowser = MCBrowserViewController(serviceType: "petepeteGOP9", session: mcSession)
+        mcBrowser.delegate = self
+        present(mcBrowser, animated: true)
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
